@@ -1,0 +1,169 @@
+.PurchaseCard {
+	min-height: 100vh;
+	background-color: #ccccbc;
+}
+
+.PurchaseCard-Container {
+	padding: 8rem 20rem 10rem;
+	background-color: #ccccbc;
+}
+
+.PurchaseCard-Container hr {
+	border: 2px solid #892121;
+	width: 30rem;
+	position: absolute;
+	right: 0;
+}
+
+.purchaseMenu {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 50% 30% 20%;
+	grid-template-columns: 50% 30% 20%;
+	background-color: #892121;
+	color: #ccccbc;
+	padding: 0 2rem;
+	border-radius: 2rem;
+}
+
+.purchaseMenu h1 {
+	font-size: 1.8rem;
+	margin: 1rem;
+}
+
+.purchaseMenu h2 {
+	font-size: 1.8rem;
+	margin: 1rem;
+	text-align: center;
+}
+
+.purchaseMenu h3 {
+	font-size: 1.8rem;
+	margin: 1rem;
+	text-align: end;
+}
+
+.PurchaseCardItem-SectionContainer {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 50% 30% 20%;
+	grid-template-columns: 50% 30% 20%;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	color: #58585f;
+}
+
+.PurchaseCardItem-SectionContainer h3 {
+	text-align: center;
+	font-size: 1.6rem;
+	padding: 0.8rem;
+	border: 1px solid #58585f;
+	min-width: 15px;
+	height: 25px;
+}
+
+.PurchaseCardItem-SectionContainer h4 {
+	text-align: end;
+	font-size: 1.8rem;
+}
+
+.PurchaseCardItem-SectionContainer h5 {
+	cursor: pointer;
+	margin: 0;
+	font-size: 1.2rem;
+	color: #892121;
+}
+
+.PurchaseCardItem-SectionContainer .PurchaseCard-countContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.PurchaseCardItem-RightContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-self: start;
+}
+
+.PurchaseCardItem-RightContainer img {
+	height: 8rem;
+	width: 7rem;
+	margin-right: 1rem;
+	border-radius: 2rem;
+}
+
+.PurchaseCardItem-RightContainer h1 {
+	margin-top: 0.1rem;
+	font-size: 1.5rem;
+	margin-bottom: 0.2rem;
+}
+
+.PurchaseCardItem-RightContainer h2 {
+	font-size: 1.2rem;
+	margin-bottom: 0.2rem;
+	margin-top: 0.1rem;
+}
+
+.PurchaseCard-TotalContainer {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 50% 30% 20%;
+	grid-template-columns: 50% 30% 20%;
+	color: #58585f;
+	margin-top: 3rem;
+}
+
+.PurchaseCard-TotalContainer h1 {
+	font-size: 2rem;
+	text-align: end;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 2;
+	grid-column: 1 / span 2;
+	margin: 2rem;
+}
+
+.PurchaseCard-TotalContainer h2 {
+	font-size: 2rem;
+	margin: 2rem;
+	margin: 2rem;
+	text-align: end;
+}
+
+.PurchaseCard-TotalContainer h3 {
+	text-align: end;
+	font-size: 2rem;
+	margin: 2rem;
+	-ms-grid-row: 2;
+	-ms-grid-row-span: 1;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 2;
+	grid-area: 2/1 / span 1 / span 2;
+}
+
+.PurchaseCard-TotalContainer h4 {
+	font-size: 2rem;
+	margin: 2rem;
+	text-align: end;
+}
+
+.PurchaseCard-TotalContainer h5 {
+	text-align: end;
+	font-size: 2rem;
+	margin: 2rem;
+	-ms-grid-row: 3;
+	-ms-grid-row-span: 1;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 2;
+	grid-area: 3/1 / span 1 / span 2;
+}
+
+.PurchaseCard-TotalContainer h6 {
+	font-size: 2rem;
+	margin: 2rem;
+	text-align: end;
+}

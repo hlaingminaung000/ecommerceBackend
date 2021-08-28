@@ -1,0 +1,112 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			.PurchaseCard { min-height: 100vh; background-color: #ccccbc; }
+			.PurchaseCard-Container { padding: 1rem 5rem; background-color: #ccccbc; }
+			.PurchaseCard-Container hr { border: 2px solid #892121; width: 100%;
+			margin-left: auto; position: absolute; right: 0; } .purchaseMenu {
+			display: flex; flex-direction: row;justify-content: space-around;
+			background-color: #892121; color: #ccccbc; padding: 0 0.5rem;
+			border-radius: 2rem; } .purchaseMenu h1 { font-size: 1.4rem; margin:
+			1rem;margin-right: auto; } .purchaseMenu h2 { font-size: 1.4rem; margin:
+			1rem; text-align: center; margin-left: auto; margin-right: auto;}
+			.purchaseMenu h3 { font-size: 1.4rem; margin: 1rem; text-align: end; }
+			.PurchaseCardItem-SectionContainer { display: -ms-grid; display: flex;
+			flex-direction: row;justify-content: space-between; margin-bottom: 2rem;
+			margin-top: 1rem; color: #58585f; } .PurchaseCardItem-SectionContainer h3
+			{ text-align: center; font-size: 1.4rem; padding: 0.8rem; border: 1px
+			solid #58585f; min-width: 15px; height: 25px; }
+			.PurchaseCardItem-SectionContainer h4 { text-align: end; font-size:
+			1.6rem; margin-right: 1rem;} .PurchaseCardItem-SectionContainer h5 {
+			cursor: pointer; margin: 0; font-size: 1rem; color: #892121; }
+			.PurchaseCardItem-RightContainer {margin-right: auto; margin-left: 1rem}
+			.PurchaseCardItem-RightContainer img { height: 8rem; width: 7rem;
+			margin-right: 1rem; border-radius: 2rem; }
+			.PurchaseCardItem-RightContainer h1 { margin-top: 0.1rem; font-size:
+			1.3rem; margin-bottom: 0.2rem; } .PurchaseCardItem-RightContainer h2 {
+			font-size: 1rem; margin-bottom: 0.2rem; margin-top: 0.1rem; }
+			.PurchaseCard-TotalContainer { color: #58585f;margin-left: auto;
+			}.PurchaseCard-TotalContainer div{ display: flex;flex-direction:
+			row;justify-content: flex-end;} .PurchaseCard-TotalContainer h1 {
+			font-size: 1.6rem; text-align: end; margin: 2rem;margin-left: auto; }
+			.PurchaseCard-TotalContainer h2 { font-size: 1.6rem; margin: 2rem; margin:
+			2rem; text-align: end; } .PurchaseCard-TotalContainer h3 { text-align:
+			end; font-size: 1.6rem; margin: 2rem;margin-left: auto; }
+			.PurchaseCard-TotalContainer h4 { font-size: 1.6rem; margin: 2rem;
+			text-align: end; } .PurchaseCard-TotalContainer h5 { text-align: end;
+			font-size: 1.6rem; margin: 2rem; margin-left: auto; }
+			.PurchaseCard-TotalContainer h6 { font-size: 1.6rem; margin: 2rem;
+			text-align: end; } @media screen and (max-width: 768px) {
+			.PurchaseCard-Container { padding: 1rem; } .purchaseMenu h1, .purchaseMenu
+			h2, .purchaseMenu h3 { font-size: 1.6rem; }
+			.PurchaseCardItem-SectionContainer h4 { font-size: 1.6rem; }
+			.PurchaseCardItem-RightContainer h1 { font-size: 1.4rem; }
+			.PurchaseCardItem-RightContainer h2 { font-size: 1.2rem; }
+			.PurchaseCard-TotalContainer h2, .PurchaseCard-TotalContainer h4,
+			.PurchaseCard-TotalContainer h6 { text-align: start; margin: 2rem 0;
+			font-size: 1.8rem; } .PurchaseCard-TotalContainer h1,
+			.PurchaseCard-TotalContainer h3, .PurchaseCard-TotalContainer h5 {
+			font-size: 1.8rem; } } @media screen and (max-width: 450px) {
+			.purchaseMenu h1{font-size: 1.2rem;} .purchaseMenu h3{ font-size: 1.2rem;
+			} .PurchaseCard-Container { padding: 1rem; }
+			.PurchaseCardItem-SectionContainer h4 { font-size: 1rem; }
+			.PurchaseCardItem-SectionContainer h3 { font-size: 1.2rem; width: 5px;
+			height: 20px; } .PurchaseCardItem-SectionContainer h5 { font-size: 0.8rem;
+			} .PurchaseCardItem-RightContainer img { width: 7rem; height: 7rem; }
+			.PurchaseCardItem-RightContainer h1 { font-size: 1rem; }
+			.PurchaseCardItem-RightContainer h2 { font-size: 0.8rem; } }
+			.PurchaseCard-TotalContainer h1{ font-size: 1.2rem; }
+			.PurchaseCard-TotalContainer h2{ font-size: 1.2rem; }
+			.PurchaseCard-TotalContainer h3{ font-size: 1.2rem; }
+			.PurchaseCard-TotalContainer h4{ font-size: 1.2rem; }
+			.PurchaseCard-TotalContainer h5{ font-size: 1.2rem; }
+			.PurchaseCard-TotalContainer h6{ font-size: 1.2rem; } .ps{font-size:
+			0.8rem;}
+		</style>
+	</head>
+	<body>
+		<div class="PurchaseCard-Container">
+			<div>
+				<div class="purchaseMenu">
+					<h1>Product</h1>
+					<h3>Cost</h3>
+				</div>
+				<div>
+					<div class="PurchaseCardItem-Container">
+						{{#each purchasedProducts}}
+							<div class="PurchaseCardItem-SectionContainer">
+								<div class="PurchaseCardItem-RightContainer">
+									<h1>{{this.itemName}}</h1>
+									<h2>Price: {{this.money}}</h2>
+									<h2>Size: {{this.size}}</h2>
+									<h2>Count: {{this.count}}</h2>
+								</div>
+								<h4> {{loud this.count this.money}}</h4>
+							</div>
+						{{/each}}
+					</div>
+					<hr />
+					<div class="PurchaseCard-TotalContainer">
+						<div>
+							<h1>Combine</h1>
+							<h2>{{Combin}}</h2>
+						</div>
+						<div>
+							<h3>Tax</h3>
+							<h4>{{ta}}</h4>
+						</div>
+						<div>
+							<h5>Total</h5>
+							<h6>{{tota}}</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h1 class="ps">*Your ordered products will be delievered within a week</h1>
+			<h1 class="ps">*Thank you for your interest</h1>
+		</div>
+	</body>
+</html>

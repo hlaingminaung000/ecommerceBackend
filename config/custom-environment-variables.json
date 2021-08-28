@@ -1,0 +1,4 @@
+{
+	"jwtSecretKey": "ecommerce_jwtSecretKey",
+	"salt": "ecommerce_salt"
+}
